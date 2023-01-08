@@ -3,7 +3,8 @@ type StatusProp = {
 };
 
 export const Status = (props: StatusProp) => {
-  let message;
+  let message: string = "";
+
   if (props.status === "loading") {
     message = "loading...";
   } else if (props.status === "success") {
@@ -12,5 +13,5 @@ export const Status = (props: StatusProp) => {
     message = "Error fetching data";
   }
 
-  return <div>Status</div>;
+  return <div>{message}</div>;
 };
